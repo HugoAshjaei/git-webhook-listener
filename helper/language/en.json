@@ -1,0 +1,11 @@
+{
+  "serverIsRunning": "Welcome sir, Server is running at port: ",
+  "mongodbConnected": "MongoDB connected to project",
+  "enterDataCorrectly": "Please enter required data correctly.",
+  "userNotFound": "User not found.",
+  "success": "Success.",
+  "failed": "Failed.",
+  "notFound": "Not found.",
+  "updateCoworkers": "Updating coworkers. Maybe it takes a 30 seconds. Please wait.",
+  "updateCoworkersDone": "Coworkers updated successfully."
+}
