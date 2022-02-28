@@ -4,18 +4,18 @@ const en = require('../helper/language/en.json'),
 
 exports.checkAndDeploy = async (req, res) => {
     try {
-        console.log("--------------------------- body")
-        console.log(req.body);
-        console.log("--------------------------- query")
-        console.log(req.query);
-        console.log("--------------------------- headers")
-        console.log(req.headers);
-        // const shell = await webhookService.check(req.params.provider, req.params.repository);
-        // await webhookService.deploy(shell);
-        sendResponse(res, 200, {
-            message: en.success
+        const shell = await webhookService.check(req.params.provider, req.params.repository, req.body.branch);
+        webhookService.deploy(shell, req.params.provider, req.params.repository, req.body.branch, req.body.repository.ssh_url).then(() => {
+            sendResponse(res, 200, {
+                message: en.success
+            });
+        }).catch(error => {
+            const err = new Error(error.message || en.scriptProcessFailed);
+            err.status = 404;
+            throw err;
         });
     } catch (error) {
+        console.log(error);
         return sendResponse(res, error.status || 400, {
             error: {
                 message: error.message || en.enterDataCorrectly

@@ -1,13 +1,13 @@
-const { get } = require("lodash");
-
 const express = require("express"),
     router = express.Router(),
     {
         checkAndDeploy,
-    } = require("../../controllers/webhook");
+    } = require("../../controllers/webhook"),
+    auth = require("../../middleware/auth");
 
 router.post(
     "/:provider/:repository",
+    auth,
     checkAndDeploy,
 );
 
