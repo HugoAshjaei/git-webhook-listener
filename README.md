@@ -2,9 +2,16 @@
 
 ## Table of contents
 
-* [Summary](#summary)
-* [Installation and Running](#installation-and-running)
-* [How it works](#how-it-works)
+- [Git webhook listener](#git-webhook-listener)
+  - [Table of contents](#table-of-contents)
+  - [Summary](#summary)
+        - [Tech](#tech)
+  - [Installation and Running](#installation-and-running)
+        - [Step 1](#step-1)
+        - [Step 2](#step-2)
+        - [Step 3](#step-3)
+  - [How it works](#how-it-works)
+  - [TODO](#todo)
 
 ## Summary
 If you want to run a shell script on a git push, you can use this repository.
@@ -68,7 +75,7 @@ Then create a file named `(your repository).(branch name).json` and use the foll
     "ssh user@ip 'sudo mv /home/user/deploy/* /var/www/my-website-directory/'",
     "echo 'Deploy successful'"
   ]
-}
+}```
 
 > Note: If you want to deploy in another server by ssh you should run below commands in your server terminal.
 ```sh
