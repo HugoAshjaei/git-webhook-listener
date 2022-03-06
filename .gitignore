@@ -1,4 +1,6 @@
-repositories/*
+repositories/github/*
+repositories/gitlab/*
+
 clone
 README.md.example
 
