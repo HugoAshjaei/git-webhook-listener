@@ -75,7 +75,8 @@ Then create a file named `(your repository).(branch name).json` and use the foll
     "ssh user@ip 'sudo mv /home/user/deploy/* /var/www/my-website-directory/'",
     "echo 'Deploy successful'"
   ]
-}```
+}
+```
 
 > Note: If you want to deploy in another server by ssh you should run below commands in your server terminal.
 ```sh
